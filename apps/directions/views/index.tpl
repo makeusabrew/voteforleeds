@@ -5,16 +5,22 @@
         <div class="grid-8">
         
             
-            {foreach from=$slides item="slide"}
-                <div id="content">
-                
-                    <ul id="pagination">
-                        <li class="prev"><a href="#">Previous entry</a></li>
-                        <li class="next"><a href="#">Next entry</a></li>
-                    </ul>
-                    {$slide->content}
-                </div>
-            {/foreach}
+            <div id="content">
+                <ul id="pagination">
+                    <li class="prev"><a href="#">Previous entry</a></li>
+                    <li class="next"><a href="#">Next entry</a></li>
+                </ul>
+                {foreach from=$slides item="slide" name="loop"}
+                    <div class='foobar' id='slide{$smarty.foreach.loop.index+1}'>
+                        {$slide->content}
+                    </div>
+                    {if !$smarty.foreach.loop.first}
+                        <script>
+                            document.getElementById('slide{$smarty.foreach.loop.index+1}').style.display = 'none';
+                        </script>
+                    {/if}
+                {/foreach}
+            </div>
 
             <ul id="share">
                 <li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
@@ -56,17 +62,9 @@
             </form>
         
             <ul class="thumbs cf">
-                <li id="overview-thumb">
-                    <a href="#">
-                        <h3>Overview</h3>
-                        <p>Introduced by the team in their own words.</p>
-                    </a>
-                </li>
-                <li><a href="#"><img src="http://dummyimage.com/140x100/eee/eee.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="http://dummyimage.com/140x100/eee/eee.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="http://dummyimage.com/140x100/eee/eee.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="http://dummyimage.com/140x100/eee/eee.jpg" alt="" /></a></li>
-                <li><a href="#"><img src="http://dummyimage.com/140x100/eee/eee.jpg" alt="" /></a></li>
+                {foreach from=$slides item="slide"}
+                    {$slide->thumbnail}
+                {/foreach}
             </ul>
             
         </div>
