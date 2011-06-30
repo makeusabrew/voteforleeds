@@ -204,6 +204,10 @@ a{
 	font-weight:bold;
 }
 
+a p{
+    font-weight:normal;
+}
+
 
 
 
