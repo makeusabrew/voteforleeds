@@ -52,9 +52,9 @@
                 <div class="wrapper">
                 
                     <ul id="entries-nav">
-                        <li class="current"><a href="#">Direction A</a></li>
-                        <li><a href="#">Direction B</a></li>
-                        <li><a href="#">Direction C</a></li>
+                        <li{if isset($direction) && $direction->url == "direction-a"} class="current"{/if}><a href="direction-a">Direction A</a></li>
+                        <li{if isset($direction) && $direction->url == "direction-b"} class="current"{/if}><a href="direction-b">Direction B</a></li>
+                        <li{if isset($direction) && $direction->url == "direction-c"} class="current"{/if}><a href="direction-c">Direction C</a></li>
                     </ul>
                 
                 </div>

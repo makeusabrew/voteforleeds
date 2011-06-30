@@ -35,59 +35,26 @@
 {block name="body"}
     <ul id="line-up" class="grids">
         
-        <li class="grid-4">
-        
-            <a href="inner.php">
+        {foreach from=$directions item="direction"}
+            <li class="grid-4">
             
-                <h2 class="direction dir-a">Direction A</h2>
-            
-                <img src="img/content/entries/a/cropped.jpg" alt="Cropped version of the Direction A logo" />
+                <a href="{$direction->url}">
                 
-                <h3>Direction A overview</h3>
+                    {cycle assign="cycle" values='a,b,c'}
+                    <h2 class="direction dir-{$cycle}">{$direction->title|htmlentities8}</h2>
                 
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.</p>
+                    <img src="img/content/entries/{$cycle}/cropped.jpg" alt="Cropped version of the {$direction->title|htmlentities8} logo" />
+                    
+                    <h3>{$direction->title|htmlentities8} overview</h3>
+                    
+                    <p>{$direction->content|htmlentities8}</p>
+                    
+                    <b class="more-link">View full direction</b>
                 
-                <b class="more-link">View full direction</b>
-            
-            </a>
-            
-        </li>
-        
-        <li class="grid-4">
-        
-            <a href="inner.php">
-            
-                <h2 class="direction dir-b">Direction B</h2>
+                </a>
                 
-                <img src="img/content/entries/b/cropped.jpg" alt="Cropped version of the Direction B logo" />
-                
-                <h3>Direction B overview</h3>
-                
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.</p>
-                
-                <b class="more-link">View full direction</b>
-            
-            </a>
-            
-        </li>
-        
-        <li class="grid-4">
-        
-            <a href="inner.php">
-            
-                <h2 class="direction dir-c">Direction C</h2>
-            
-                <img src="img/content/entries/c/cropped.jpg" alt="Cropped version of the Direction C logo" />
-                
-                <h3>Direction C overview</h3>
-                
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.</p>
-                
-                <b class="more-link">View full direction</b>
-            
-            </a>
-            
-        </li>
+            </li>
+        {/foreach}
         
     </ul>
 {/block}
