@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 30, 2011 at 03:09 PM
+-- Generation Time: Jun 30, 2011 at 03:13 PM
 -- Server version: 5.1.44
 -- PHP Version: 5.3.2
 
@@ -80,4 +80,26 @@ INSERT INTO `direction_slides` VALUES(9, 2, '<img src="directions/Gaz_slide3.jpg
 INSERT INTO `direction_slides` VALUES(10, 2, '<img src="directions/Gaz_slide4.jpg" alt="" />', 3, '2011-06-30 15:07:34', '2011-06-30 15:07:34');
 INSERT INTO `direction_slides` VALUES(11, 2, '<img src="directions/Gaz_slide5.jpg" alt="" />', 4, '2011-06-30 15:07:34', '2011-06-30 15:07:34');
 INSERT INTO `direction_slides` VALUES(12, 2, '<img src="directions/Gaz_slide6.jpg" alt="" />', 5, '2011-06-30 15:07:49', '2011-06-30 15:07:49');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `votes`
+--
+
+DROP TABLE IF EXISTS `votes`;
+CREATE TABLE `votes` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `direction_id` int(10) unsigned NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created` datetime NOT NULL,
+  `updated` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `votes`
+--
+
 SET FOREIGN_KEY_CHECKS=1;

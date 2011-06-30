@@ -10,4 +10,8 @@ class DirectionsController extends Controller {
         $this->assign("direction", $direction);
         $this->assign("slides", $direction->getSlides());
     }
+
+    public function vote() {
+        //
+    }
 }
