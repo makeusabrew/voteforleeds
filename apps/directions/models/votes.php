@@ -12,6 +12,7 @@ class Votes extends Table {
             ),
             "email" => array(
                 "type" => "email",
+                "required" => true,
                 "validation" => "unique",
             ),
         ),

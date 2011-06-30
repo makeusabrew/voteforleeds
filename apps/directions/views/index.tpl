@@ -27,24 +27,32 @@
         
         <div class="grid-4">
         
-            <form id="vote">
-                <fieldset>
-                
-                    <legend class="accessibility">Place your vote for the Leeds Digital Festival brand identity</legend>
+            <form id="vote" action="{$direction->url}/vote" method="post">
+                {if !$hasVoted}
+                    <fieldset>
                     
-                    <p>
-                        <label for="email">Vote for this direction</label>
-                        <input type="email" id="email" name="email" placeholder="your email address" /> <input type="submit" value="Vote" />
-                        <small class="form-info">Remember, it&rsquo;s <strong>one vote per person!</strong></small>
-                    </p>
-{*
-                    <div class="thanks">
-                        <h3>Thanks for voting!</h3>
-                        <p>The winners will be announced in July 2011</p>
-                    </div>
-*}
-                    
-                </fieldset>
+                        <legend class="accessibility">Place your vote for the Leeds Digital Festival brand identity</legend>
+                        
+                        <p>
+                            <label for="email">Vote for this direction</label>
+                            <input type="email" id="email" name="email" placeholder="your email address" /> <input type="submit" value="Vote" />
+                            <small class="form-info">Remember, it&rsquo;s <strong>one vote per person!</strong></small>
+                        </p>
+                        {* leave the UL here even if it's empty, so we can hook into it from JS. Can rework if desired... *}
+                        <ul class='errors'>
+                            {if isset($_errors) && count($_errors)}
+                                {foreach from=$_errors item="_err"}
+                                    <li>{$_err}</li>
+                                {/foreach}
+                            {/if}
+                        </ul>
+                        
+                    </fieldset>
+                {/if}
+                <div class="thanks" {if !$hasVoted}style="display:none;"{/if}>
+                    <h3>Thanks for voting!</h3>
+                    <p>The winners will be announced in July 2011</p>
+                </div>
             </form>
         
             <ul class="thumbs cf">
@@ -64,4 +72,8 @@
         </div>
         
     </div>
+{/block}
+{block name="script"}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="js/vote.js"></script>
 {/block}
