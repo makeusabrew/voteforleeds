@@ -24,9 +24,13 @@ body{
 }
 #content{
 	position:relative;
-	padding:30px 20px;
 	background:#fff;
 	border:1px solid #bebebe;
+}
+
+.slide{
+    width:618px;
+    height:463px;
 }
 .blurb{
 	-moz-column-count:2;
@@ -208,8 +212,9 @@ a p{
     font-weight:normal;
 }
 
-
-
+.slide p{
+    margin:1.5em;
+}
 
 
 /*------------------------------------*\
@@ -338,12 +343,11 @@ input[type="submit"]{
 /*--- THANKS ---*/
 .thanks{
 	text-align:center;
-	margin-left:-25px;
-	min-height:81px;
+	min-height:134px;
 	background:url(../img/css/icons/heart.png) center center no-repeat;
 }
 .thanks h3{
-	padding-top:20px; /* It's horrible having to hard code this but I had to, sorry... */
+	padding-top:40px; /* It's horrible having to hard code this but I had to, sorry... */
 }
 .thanks p{
 	font-size:0.857em; /* 12px */
@@ -460,4 +464,8 @@ CSS for tablets and narrower devices
 #line-up img{
 	width:200px;
 	height:auto;
+}
+.slide{
+    width:458px;
+    height:343px;    
 }

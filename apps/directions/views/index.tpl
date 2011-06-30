@@ -10,8 +10,9 @@
                     <li class="prev"><a href="#">Previous entry</a></li>
                     <li class="next"><a href="#">Next entry</a></li>
                 </ul>
+                <div id="slides">
                 {foreach from=$slides item="slide" name="loop"}
-                    <div class='foobar' id='slide{$smarty.foreach.loop.index+1}'>
+                    <div class='slide' id='slide{$smarty.foreach.loop.index+1}'>
                         {$slide->content}
                     </div>
                     {if !$smarty.foreach.loop.first}
@@ -20,7 +21,8 @@
                         </script>
                     {/if}
                 {/foreach}
-            </div>
+                </div>
+            </div>            
 
             <ul id="share">
                 <li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
@@ -74,4 +76,6 @@
 {block name="script"}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script src="js/vote.js"></script>
+    <script type="text/javascript" src="js/carousel.js"></script>
+
 {/block}
