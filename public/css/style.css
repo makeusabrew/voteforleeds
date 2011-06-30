@@ -69,6 +69,10 @@ body{
 	top:-5px;
 	right:-15px;
 }
+#gallery #badge{
+    right:-80px;
+}
+
 #header .intro{
 	border-top:1px solid #212121;
 }

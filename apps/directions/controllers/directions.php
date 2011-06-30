@@ -18,6 +18,7 @@ class DirectionsController extends Controller {
     public function index() {
         $this->assign("direction", $this->direction);
         $this->assign("slides", $this->direction->getSlides());
+        $this->assign("page_id", "gallery");
     }
 
     public function vote() {

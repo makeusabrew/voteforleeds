@@ -19,7 +19,7 @@
 	<link rel="shortcut icon" href="icon.png?1" />
 	<link rel="apple-touch-icon-precomposed" href="icon.png?1" />
 </head>
-<body>
+<body {if isset($page_id)}id="{$page_id}"{/if}>
 	
 	
 	
