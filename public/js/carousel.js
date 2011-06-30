@@ -1,7 +1,8 @@
 $(function(){
-    var $slides = $('#slides'), $content = $('#content'), $slide = $('.slide'), $thumbs = $('.thumbs a'),index = 0;
+    var $slides = $('#slides'), $content = $('#content'), $slide = $('.slide'), $thumbs = $('.thumbs a'), index = 0;
     $('.slide').css('display', 'block');
     $('#pagination').css('zindex', 100);
+    $thumbs.eq(0).css({'border':'solid 5px #e4d011'});
     
     $('.prev a').bind('click', function(e){
         e.preventDefault();

@@ -213,7 +213,11 @@ a p{
 }
 
 .slide p{
-    margin:1.5em;
+    padding:0.3em 1.5em;
+}
+
+.slide p:first-of-type{
+    padding-top:2em;
 }
 
 
@@ -468,4 +472,13 @@ CSS for tablets and narrower devices
 .slide{
     width:458px;
     height:343px;    
+}
+
+.slide p{
+    font-size:0.9em;
+}
+
+#comments iframe{
+    width:460px !important;
+}
 }

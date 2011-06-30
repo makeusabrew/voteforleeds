@@ -29,7 +29,7 @@
                 <li><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="{$full_url}" send="true" width="140" show_faces="false" layout="button_count" font="arial"></fb:like></li>
             </ul>
             
-            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="{$full_url}" num_posts="5" width="620"></fb:comments>
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><div id="comments"><fb:comments href="{$full_url}" num_posts="5" width="620"></fb:comments></div><!-- sorry Harry, had to hack some extra markup around the comments to make them work nicely -->
             
         </div>
         
