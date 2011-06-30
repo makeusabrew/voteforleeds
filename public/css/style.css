@@ -1,0 +1,459 @@
+@charset "UTF-8";
+/*------------------------------------*\
+	LEEDS DIGITAL FESTIVAL
+\*------------------------------------*/
+/*
+Author:             Harry Roberts
+Date:               June 2011
+*/
+
+
+
+
+
+/*------------------------------------*\
+	MAIN
+\*------------------------------------*/
+html{
+	font:0.875em/1.5 "Helvetica Neue", Arial, sans-serif; /* 14px */
+	color:#535353;
+	background:url(../img/css/page/bg.jpg) #dbdbdb;
+}
+body{
+	background:none!important;
+}
+#content{
+	position:relative;
+	padding:30px 20px;
+	background:#fff;
+	border:1px solid #bebebe;
+}
+.blurb{
+	-moz-column-count:2;
+	-moz-column-gap:20px;
+	-webkit-column-count:2;
+	-webkit-column-gap:20px;
+	column-count:2;
+	column-gap:20px;
+}
+.blurb > :last-child{
+	margin:0;
+}
+
+
+
+
+
+/*------------------------------------*\
+	HEADER
+\*------------------------------------*/
+#header{
+	color:#fff;
+	background:url(../img/css/page/header.jpg) top left repeat-x #282828;
+	margin-bottom:50px;
+}
+#header .wrapper{
+	position:relative;
+}
+#top{
+	background:url(../img/css/page/header-strip.png) bottom left repeat-x;
+	border-bottom:1px solid #363636;
+	min-height:81px;
+}
+#badge{
+	position:absolute;
+	top:-5px;
+	right:-15px;
+}
+#header .intro{
+	border-top:1px solid #212121;
+}
+#header .intro p{
+	padding-right:10px;
+	border-right:1px solid #363636;
+}
+#header p{
+	margin:0;
+	font-weight:bold;
+}
+#header b,
+#header strong{
+	color:#7cc576;
+}
+#header b{
+	font-style:italic;
+}
+.main-link{
+	text-decoration:none;
+	color:#445d42;
+	color:rgba(124,197,118,0.35);
+	display:block;
+	position:relative;
+	font:bold 2.571em/1 "Helvetica Neue", Arial, sans-serif;
+}
+.main-link:hover{
+	color:rgb(124,197,118);
+	color:rgba(124,197,118,1);
+}
+.main-link:after{
+	content:"";
+	position:absolute;
+	top:50%;
+	right:0;
+	margin-top:-10px;
+	width:0;
+	height:0;
+	display:block;
+	border:10px solid #445d42;
+	border-color:transparent transparent transparent #445d42;
+	border-color:transparent transparent transparent rgba(124,197,118,0.35);
+}
+.main-link:hover:after{
+	border-color:transparent transparent transparent rgb(124,197,118);
+	border-color:transparent transparent transparent rgba(124,197,118,1);
+}
+#entries-nav{
+	list-style:none;
+	margin:0;
+}
+#entries-nav li{
+	display:inline;
+}
+#entries-nav a{
+	display:inline-block;
+	padding:5px 10px;
+	color:#777;
+}
+#entries-nav .current a{
+	color:#7cc576;
+}
+
+
+
+
+
+/*------------------------------------*\
+	FOOTERS
+\*------------------------------------*/
+/*--- PAGE FOOTER ---*/
+#page-footer{
+	color:#939292;
+	padding:25px 0;
+	background:url(../img/css/page/page-footer.gif) top left repeat-x;
+}
+#page-footer p{
+	margin:0;
+}
+
+/*--- SITE FOOTER ---*/
+#site-footer{
+	font-size:0.857em; /* 12px */
+	background:url(../img/css/page/footer.jpg) bottom left repeat-x #2d2d2d;
+	color:#737373;
+	padding:25px 0 50px;
+	
+	-moz-box-shadow:0 0 10px rgba(0,0,0,0.75) inset;
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,0.75) inset;
+	box-shadow:0 0 10px rgba(0,0,0,0.75) inset;
+}
+#site-footer p{
+	margin-bottom:0;
+}
+.desc{
+	position:relative;
+}
+.desc b{
+	position:absolute;
+	top:80%;
+	left:50%;
+	display:block;
+	width:122px;
+	height:31px;
+	text-indent:-9999px;
+	background:url(../img/css/sprite/sprite.png) 0 -76px;
+}
+
+
+
+
+
+/*------------------------------------*\
+	TYPE
+\*------------------------------------*/
+h1,h2,h3,h4,h5,h6{
+	font-weight:bold;
+}
+h1{
+	font-size:4em; /* 55px */
+	line-height:1;
+	margin:0;
+	padding-right:75px;
+}
+.grid-8 h1{
+	padding:0;
+}
+h2{
+	color:#97ae37;
+}
+h3{
+	color:#3c3b3b;
+	font-size:1.286em; /* 18px */
+}
+a{
+	color:#2e8242;
+	font-weight:bold;
+}
+
+
+
+
+
+/*------------------------------------*\
+	GALLERY
+\*------------------------------------*/
+#line-up li{
+	position:relative;
+	margin-bottom:50px;
+}
+#line-up a{
+	color:#535353;
+	text-decoration:none;
+	display:block;
+}
+#line-up img{
+	display:block;
+	border:10px solid #f7f7f7;
+	margin-bottom:25px;
+	
+	-moz-box-shadow:2px 2px 3px rgba(0,0,0,0.1);
+	-webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.1);
+	box-shadow:2px 2px 3px rgba(0,0,0,0.1);
+}
+#line-up .more-link{
+	text-decoration:none;
+	display:inline-block;
+	color:#fff;
+	padding:5px 10px;
+	background:#73a57f;
+	background:rgba(46,130,66,0.6);
+}
+#line-up a:hover .more-link{
+	background:#2e8242;
+	background:rgba(46,130,66,1);
+}
+#line-up a:hover img{
+	-moz-box-shadow:2px 2px 3px rgba(0,0,0,0.25);
+	-webkit-box-shadow:2px 2px 3px rgba(0,0,0,0.25);
+	box-shadow:2px 2px 3px rgba(0,0,0,0.25);
+}
+
+.direction{
+	width:130px;
+	height:76px;
+	display:block;
+	text-indent:-9999px;
+	position:absolute;
+	top:0;
+	left:0;
+	background:url(../img/css/sprite/sprite.png)
+}
+.dir-b	{ background-position:-130px 0; }
+.dir-c	{ background-position:-260px 0; }
+
+
+
+
+
+/*------------------------------------*\
+	SHARE
+\*------------------------------------*/
+#share{
+	float:right;
+	padding:5px 0 0 10px;
+	background:#bebebe;
+	list-style:none;
+	margin:0;
+	margin-bottom:20px;
+}
+#share li{
+	float:right;
+}
+
+
+
+
+
+/*------------------------------------*\
+	VOTE
+\*------------------------------------*/
+#vote fieldset{
+	border:1px solid #bebebe;
+	border-width:1px 0;
+	padding:10px 0 5px 25px;
+}
+#vote label{
+	font-weight:bold;
+}
+#vote label,
+.thanks h3{
+	color:#c53f3f;
+}
+label[for="email"]{
+	background:url(../img/css/icons/heart.gif) left center no-repeat;
+	padding-left:25px;
+	margin-left:-25px;
+}
+#email{
+	background:#fff;
+	border:1px solid #b0aaaa;
+	padding:5px;
+	-moz-box-shadow:0 0 5px rgba(0,0,0,0.25) inset;
+	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.25) inset;
+	box-shadow:0 0 5px rgba(0,0,0,0.25) inset;
+}
+#email:focus{
+	-moz-box-shadow:0 0 5px rgba(0,0,0,0.5) inset;
+	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5) inset;
+	box-shadow:0 0 5px rgba(0,0,0,0.5) inset;
+}
+.form-info{
+	display:block;
+}
+label[for="email"],
+#email,
+.form-info{
+	margin-bottom:5px;
+}
+input[type="submit"]{
+	border:none;
+	padding:5px;
+	color:#fff;
+	background:#c53f3f;
+}
+
+/*--- THANKS ---*/
+.thanks{
+	text-align:center;
+	margin-left:-25px;
+	min-height:81px;
+	background:url(../img/css/icons/heart.png) center center no-repeat;
+}
+.thanks h3{
+	padding-top:20px; /* It's horrible having to hard code this but I had to, sorry... */
+}
+.thanks p{
+	font-size:0.857em; /* 12px */
+	color:#787878;
+}
+.thanks h3,
+.thanks p{
+	margin:0;
+}
+
+
+
+
+
+/*------------------------------------*\
+	THUMBS
+\*------------------------------------*/
+ul.thumbs{
+	list-style:none;
+	margin:0;
+}
+.thumbs li{
+	float:left;
+	width:150px;
+}
+.thumbs a{
+	border:5px solid #fff;
+	display:block;
+}
+.thumbs img{
+	width:140px;
+	height:auto;
+	display:block;
+}
+#overview-thumb a{
+	min-height:80px;
+	text-decoration:none;
+	padding:10px;
+	text-align:center;
+	background:#97ae37;
+}
+#overview-thumb a:hover h3{
+	text-decoration:underline;
+}
+#overview-thumb h3,
+#overview-thumb p{
+	color:#fff;
+	margin:0;
+}
+#overview-thumb p{
+	color:#c9dbb9;
+	font-weight:normal;
+	font-size:0.857em;
+}
+
+
+
+
+
+/*------------------------------------*\
+	PAGINATION
+\*------------------------------------*/
+#pagination{
+	list-style:none;
+	margin:0;
+}
+#pagination a{
+	display:block;
+	position:absolute;
+	left:-99999px;
+	margin-left:-26px;
+	display:block;
+	text-indent:-9999px;
+	width:52px;
+	height:26px;
+	background-image:url(../img/css/sprite/sprite.png);
+	background-position:-390px 0;
+	opacity:0.5;
+	
+	-moz-transition:0.1s opacity linear;
+	-webkit-transition:0.1s opacity linear;
+	transition:0.1s opacity linear;
+}
+#pagination .prev a	{ top:0; }
+#pagination .next a	{ bottom:0; top:auto!important; background-position:-390px -26px; }
+
+#content:hover #pagination a	{ left:50%; }
+#content #pagination a:hover,
+#content #pagination a:active,
+#content #pagination a:focus	{ opacity:1; outline:none; left:50%; }
+
+
+
+
+
+
+/*------------------------------------*\
+	NARROW
+\*------------------------------------*/
+/*
+CSS for tablets and narrower devices
+*/
+
+
+
+
+
+@media (min-width: 721px) and (max-width: 960px){
+.desc b{
+	top:90%;
+	left:auto;
+	right:0;
+}
+#line-up img{
+	width:200px;
+	height:auto;
+}

@@ -1,0 +1,22 @@
+TEAM
+
+Harry Roberts -- front-end build
+	twitter.com/csswizardry
+
+Ian Thomas -- design
+	twitter.com/anatomic
+	
+Nick Payne -- 
+	twitter.com/makeusabrew
+
+
+SITE
+
+inuit.css
+	Author: Harry Roberts
+	URL: inuitcss.com
+	Twitter: @inuitcss
+
+		
+
+humanstxt.org
