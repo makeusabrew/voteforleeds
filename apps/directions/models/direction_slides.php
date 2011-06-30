@@ -14,6 +14,9 @@ class DirectionSlides extends Table {
             "content" => array(
                 "type" => "text",
             ),
+            "thumbnail" => array(
+                "type" => "text",
+            ),
             "sort_order" => array(
                 "type" => "number",
             ),
