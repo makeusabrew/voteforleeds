@@ -1,5 +1,5 @@
 $(function(){
-    var $slides = $('#slides'), $content = $('#content'), $slide = $('.slide'), $thumbs = $('.thumbs a'), $pagination = $('#pagination a');index = 0;
+    var $slides = $('#slides'), $content = $('#content'), $slide = $('.slide'), $thumbs = $('.thumbs a'), $pagination = $('#pagination a'), index = 0;
     $('.slide').css('display', 'block');
     $thumbs.eq(0).css({'border':'solid 5px #e4d011'});
     
