@@ -7,9 +7,7 @@ class DirectionsController extends Controller {
             "url" => $this->getMatch('identifier')
         ));
         if ($direction == false) {
-            //@todo actually throw a proper 404 here
-            $this->redirect("/");
-            throw new CoreException("Page Not Found");
+            throw new CoreException("Path Rejected", CoreException::PATH_REJECTED);
         }
         $this->direction = $direction;
         $this->assign("hasVoted", $this->session->hasVoted);
@@ -39,7 +37,12 @@ class DirectionsController extends Controller {
             $this->session->hasVoted = true;
             return $this->render("thanks-for-voting");
         } else {
-            $this->setErrors($vote->getErrors());
+            $errors = $vote->getErrors();
+            if (isset($errors['email']) && $errors['email'] == 'this email is already in use') {
+                // look, it's just a quick hack right, because already in use is a bit boring and not quite right for LDF
+                $errors['email'] = 'this email address has already voted';
+            }
+            $this->setErrors($errors);
             if (!$this->request->isAjax()) {
                 $this->assign("direction", $this->direction);
                 $this->assign("slides", $this->direction->getSlides());
