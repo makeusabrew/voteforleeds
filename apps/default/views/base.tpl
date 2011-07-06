@@ -40,7 +40,7 @@
                         </div>
                     
                         <div class="grid-2">
-                            <a href="#" class="main-link">Main Site</a>
+                            <a href="http://www.leedsdigitalfestival.com" class="main-link">Main Site</a>
                         </div>
                     
                         <img src="img/logo.png" alt="Leeds Digital Festival&mdash;November 2011" id="badge" />
@@ -74,8 +74,8 @@
 	<div id="page-footer">
 	
 		<div class="wrapper">
-			<p>The winners will be announced in early July 2011.</p>
-			<p>If you would like to be kept informed of all the goings on with the festival, <a href="#">sign up for our email newsletter&hellip;</a></p>
+			<p>The winners will be announced in early August 2011.</p>
+			<p>If you would like to be kept informed of all the goings on with the festival, <a href="http://www.leedsdigitalfestival.com/#mailing-list">sign up for our email newsletter&hellip;</a></p>
 		</div>
 	
 	</div>

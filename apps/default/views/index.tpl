@@ -20,11 +20,11 @@
                 </div>
             
                 <div class="grid-4">
-                    <p>Voting closes at 5pm, Friday 24th June 2011. <strong>Remember: it&rsquo;s one vote per person!</strong></p>
+                    <p>Voting closes at 5pm, Friday 5th August 2011. <strong>Remember: it&rsquo;s one vote per person!</strong></p>
                 </div>
             
                 <div class="grid-2">
-                    <a href="#" class="main-link">Main site</a>
+                    <a href="http://www.leedsdigitalfestival.com" class="main-link">Main site</a>
                 </div>
             
             </div>

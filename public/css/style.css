@@ -97,7 +97,7 @@ body{
 	color:rgba(124,197,118,0.35);
 	display:block;
 	position:relative;
-	font:bold 2.571em/1 "Helvetica Neue", Arial, sans-serif;
+	font:bold 2.571em/0.85 "Helvetica Neue", Arial, sans-serif;
 }
 .main-link:hover{
 	color:rgb(124,197,118);
@@ -107,7 +107,7 @@ body{
 	content:"";
 	position:absolute;
 	top:50%;
-	right:0;
+	right:10px;
 	margin-top:-10px;
 	width:0;
 	height:0;
@@ -251,12 +251,13 @@ a p{
 	display:inline-block;
 	color:#fff;
 	padding:5px 10px;
-	background:#73a57f;
-	background:rgba(46,130,66,0.6);
-}
-#line-up a:hover .more-link{
 	background:#2e8242;
 	background:rgba(46,130,66,1);
+	
+}
+#line-up a:hover .more-link{
+	background:#73a57f;
+	background:rgba(46,130,66,0.6);
 }
 #line-up a:hover img{
 	-moz-box-shadow:2px 2px 3px rgba(0,0,0,0.25);
@@ -324,6 +325,7 @@ label[for="email"]{
 	background:#fff;
 	border:1px solid #b0aaaa;
 	padding:5px;
+	width:15em;
 	-moz-box-shadow:0 0 5px rgba(0,0,0,0.25) inset;
 	-webkit-box-shadow:0 0 5px rgba(0,0,0,0.25) inset;
 	box-shadow:0 0 5px rgba(0,0,0,0.25) inset;
@@ -390,22 +392,22 @@ ul.thumbs{
 	height:auto;
 	display:block;
 }
-#overview-thumb a{
+.text-thumb a{
 	min-height:80px;
 	text-decoration:none;
 	padding:10px;
 	text-align:center;
 	background:#97ae37;
 }
-#overview-thumb a:hover h3{
+.text-thumb a:hover h3{
 	text-decoration:underline;
 }
-#overview-thumb h3,
-#overview-thumb p{
+.text-thumb h3,
+.text-thumb p{
 	color:#fff;
 	margin:0;
 }
-#overview-thumb p{
+.text-thumb p{
 	color:#c9dbb9;
 	font-weight:normal;
 	font-size:0.857em;
@@ -485,4 +487,11 @@ CSS for tablets and narrower devices
 #comments iframe{
     width:460px !important;
 }
+.main-link:after{
+    display:none;
+}
+#email{
+    width:9em;
+}
+
 }
