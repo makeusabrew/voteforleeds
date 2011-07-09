@@ -45,7 +45,7 @@
                 
                     <img src="img/content/entries/{$cycle}/cropped.jpg" alt="Cropped version of the {$direction->title|htmlentities8} logo" />
                     
-                    <h3>{$direction->title|htmlentities8} overview</h3>
+                    <h3>{$direction->title|htmlentities8}</h3>
                     
                     <p>{$direction->content|htmlentities8}</p>
                     
