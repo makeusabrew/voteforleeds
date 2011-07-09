@@ -82,7 +82,6 @@
           window.fbAsyncInit = function() {
             FB.init({xfbml: true});
             FB.Event.subscribe('edge.create', function(targetUrl){
-                alert('page liked');
                 _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
             });
             FB.Event.subscribe('edge.remove', function(targetUrl){
