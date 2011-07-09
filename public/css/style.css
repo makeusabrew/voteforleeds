@@ -31,6 +31,7 @@ body{
 .slide{
     width:618px;
     height:463px;
+    overflow:hidden;
 }
 .blurb{
 	-moz-column-count:2;
@@ -216,11 +217,24 @@ a p{
     font-weight:normal;
 }
 
+.slide h2{
+    font-size:1.2em;
+    margin:0.3em 1.25em;
+}
+
+.slide > h2:first-child{
+    margin-top:1.75em;
+}
+
+.slide .col h2{
+    margin-top:0;
+}
+
 .slide p{
     padding:0.3em 1.5em;
 }
 
-.slide p:first-of-type{
+.slide > p:first-child{
     padding-top:2em;
 }
 
@@ -278,9 +292,28 @@ a p{
 .dir-b	{ background-position:-130px 0; }
 .dir-c	{ background-position:-260px 0; }
 
+.slide .col{
+    width:50%;
+    float:left;
+    font-size: 0.875em;
+}
 
+.slide > .col{
+    margin-top:2em;
+}
 
+.col ul{
+    margin-left:60px;
+}
 
+.slide hr{
+    background:#ededed;
+    border:0;
+    width:95%;
+    height:1px;
+    display:block;
+    margin:0 auto 1em auto;
+}
 
 /*------------------------------------*\
 	SHARE
@@ -494,4 +527,25 @@ CSS for tablets and narrower devices
     width:9em;
 }
 
+.slide p{
+    font-size:0.8em;
+}
+
+.slide h2{
+    font-size:1em;
+}
+
+.slide .col li{
+    font-size:0.8em;
+    display:inline;
+}
+
+.slide .col li:after{
+    content:', ';
+}
+
+.slide ul{
+    margin-left:1.4em;
+}
+ 
 }
