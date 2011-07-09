@@ -11,15 +11,15 @@
 
         {assign var="votes" value=$direction->getVotes()}
 
-            <ul class="text-left voter-list">
+            <ol class="voter-list">
         {foreach from=$votes item="vote" name="inner"}
             
-                    <li>{$vote->email}, {$vote->created|date_format:"d/m/y H:i"}, {$vote->ip|default:"-"}</li>
+                    <li><h3>{$vote->email}</h3> <p>{$vote->created|date_format:"d/m/y H:i"}, {$vote->ip|default:"-"}</p></li>
                
         {foreachelse}
             <p>No votes.</p>
         {/foreach}
-         </ul>
+         </ol>
 
         </li>
     {/foreach}

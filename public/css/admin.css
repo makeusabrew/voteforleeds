@@ -3,7 +3,26 @@ html, body{
 	background:none!important;
 }
 
-#container {
+#pie-chart{
     width:600px;
     height:400px;
+    margin:0 auto;
+}
+
+ol.voter-list{
+    margin-left:30px;
+}
+
+ol.voter-list h3{
+    margin-bottom:0.2em;
+}
+
+ol.voter-list p{
+    font-size:0.875em;
+    font-style:italic;
+    margin-bottom:0.3em;
+}
+
+ol.voter-list li{
+    margin-bottom:1.2em;
 }
