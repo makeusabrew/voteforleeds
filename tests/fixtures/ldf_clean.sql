@@ -130,6 +130,4 @@ CREATE TABLE IF NOT EXISTS `votes` (
 -- Dumping data for table `votes`
 --
 
-INSERT INTO `votes` (`id`, `direction_id`, `email`, `created`, `updated`) VALUES
-(1, 1, 'gay@payno.com', '2011-06-30 19:03:56', '2011-06-30 19:03:56');
 SET FOREIGN_KEY_CHECKS=1;
