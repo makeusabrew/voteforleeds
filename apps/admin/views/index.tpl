@@ -10,15 +10,17 @@
         <li class="grid-4"><h3>{$direction->title} ({$direction->getVoteCount()|number_format} vote{if $direction->getVoteCount() != 1}s{/if})</h3>
 
         {assign var="votes" value=$direction->getVotes()}
+
+            <ul class="text-left voter-list">
         {foreach from=$votes item="vote" name="inner"}
-            <div class="text-left">
-                <ul>
+            
                     <li>{$vote->email}, {$vote->created|date_format:"d/m/y H:i"}, {$vote->ip|default:"-"}</li>
-                </ul>
-            </div>
+               
         {foreachelse}
             <p>No votes.</p>
         {/foreach}
+         </ul>
+
         </li>
     {/foreach}
     </ul>

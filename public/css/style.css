@@ -497,6 +497,11 @@ ul.thumbs{
     margin:0 auto;
 }
 
+ul.voter-list{
+    list-style:none;
+    margin-left:30px;
+}
+
 
 
 /*------------------------------------*\
