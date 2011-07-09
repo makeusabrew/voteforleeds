@@ -1,18 +1,27 @@
 {extends file="base.tpl"}
 {block name="body"}
-    <h1>Admin</h1>
-    <div id="container"></div> 
-    <h2>Vote Breakdown</h2>
+    <h1>Admin</h1>    
+    <div id="container center"></div> 
+    
+    <h2 class="cf">Vote Breakdown</h2>
+    
+    <ul class="grids">
     {foreach from=$directions item="direction" name="outer"}
-        <h3>{$direction->title} ({$direction->getVoteCount()|number_format} vote{if $direction->getVoteCount() != 1}s{/if})</h3>
+        <li class="grid-4"><h3>{$direction->title} ({$direction->getVoteCount()|number_format} vote{if $direction->getVoteCount() != 1}s{/if})</h3>
 
         {assign var="votes" value=$direction->getVotes()}
         {foreach from=$votes item="vote" name="inner"}
-            <div>{$vote->email}, {$vote->created|date_format:"d/m/y H:i"}, {$vote->ip|default:"-"}</div>
+            <div class="text-left">
+                <ul>
+                    <li>{$vote->email}, {$vote->created|date_format:"d/m/y H:i"}, {$vote->ip|default:"-"}</li>
+                </ul>
+            </div>
         {foreachelse}
             <p>No votes.</p>
         {/foreach}
+        </li>
     {/foreach}
+    </ul>
 
 {/block}
 {block name="script"}
