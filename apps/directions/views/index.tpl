@@ -25,7 +25,7 @@
             </div>            
 
             <ul id="share">
-                <li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+                <li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="Vote for your favourite identity for the Leeds Digital Festival" data-via="LDSDigital">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
                 <li><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="{$full_url}" send="true" width="140" show_faces="false" layout="button_count" font="arial"></fb:like></li>
             </ul>
             
@@ -59,7 +59,7 @@
                 {/if}
                 <div class="thanks" {if !$hasVoted}style="display:none;"{/if}>
                     <h3>Thanks for voting!</h3>
-                    <p>The winners will be announced in July 2011</p>
+                    <p>The winners will be announced in August 2011</p>
                 </div>
             </form>
         
