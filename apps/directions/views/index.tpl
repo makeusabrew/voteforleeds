@@ -25,11 +25,11 @@
             </div>            
 
             <ul id="share">
-                <li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="Vote for your favourite identity for the Leeds Digital Festival" data-via="LDSDigital">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
-                <li><div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href="{$full_url}" send="true" width="140" show_faces="false" layout="button_count" font="arial"></fb:like></li>
+                <li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="Vote for your favourite identity for the Leeds Digital Festival" data-via="LDSDigital" data-url="http://www.voteforleeds.com/">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+                <li><fb:like href="{$full_url}" send="true" width="140" show_faces="false" layout="button_count" font="arial"></fb:like></li>
             </ul>
             
-            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><div id="comments"><fb:comments href="{$full_url}" num_posts="5" width="620"></fb:comments></div>{* sorry Harry, had to hack some extra markup around the comments to make them work nicely *}
+            <div id="comments"><fb:comments href="{$full_url}" num_posts="5" width="620"></fb:comments></div>{* sorry Harry, had to hack some extra markup around the comments to make them work nicely *}
             
         </div>
         
@@ -77,4 +77,47 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <script src="js/vote.js"></script>
     <script src="js/carousel.js"></script>
+    <div id="fb-root"></div> 
+    {literal} <script type="text/javascript"> 
+          window.fbAsyncInit = function() {
+            FB.init({xfbml: true});
+            FB.Event.subscribe('edge.create', function(targetUrl){
+                alert('page liked');
+                _gaq.push(['_trackSocial', 'facebook', 'like', targetUrl]);
+            });
+            FB.Event.subscribe('edge.remove', function(targetUrl){
+                _gaq.push(['_trackSocial', 'facebook', 'unlike', targetUrl]);
+            });
+            FB.Event.subscribe('message.send', function(targetUrl) {
+              _gaq.push(['_trackSocial', 'facebook', 'send', targetUrl]);
+            });
+            FB.Event.subscribe('comment.create', function(targetUrl) {
+              _gaq.push(['_trackSocial', 'facebook', 'comment', targetUrl]);
+            });
+            FB.Event.subscribe('comment.remove', function(targetUrl) {
+              _gaq.push(['_trackSocial', 'facebook', 'remove comment', targetUrl]);
+            });
+          };
+          (function() {
+            var e = document.createElement('script'); e.async = true;
+            
+            e.src = (document.location.protocol == 'file:' ? 'http:' : document.location.protocol) + '//connect.facebook.net/en_US/all.js';
+            document.getElementById('fb-root').appendChild(e);
+          }());
+          
+          twttr.events.bind('tweet', function(event) {
+                if (event) {
+                    var targetUrl;
+                    if (event.target && event.target.nodeName == 'IFRAME') {
+                      targetUrl = extractParamFromUri(event.target.src, 'url');
+                    }
+                    _gaq.push(['_trackSocial', 'twitter', 'tweet', targetUrl]);
+                  }
+            });
+            twttr.events.bind('follow', function(event) {
+                if (event) {
+                    _gaq.push(['_trackSocial', 'twitter', 'follow']);
+                }
+          });
+        </script>{/literal}
 {/block}
