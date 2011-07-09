@@ -8,7 +8,7 @@
 
         {assign var="votes" value=$direction->getVotes()}
         {foreach from=$votes item="vote" name="inner"}
-            <div>{$vote->email}, {$vote->created|date_format:"d/m/y H:i"}</div>
+            <div>{$vote->email}, {$vote->created|date_format:"d/m/y H:i"}, {$vote->ip|default:"-"}</div>
         {foreachelse}
             <p>No votes.</p>
         {/foreach}

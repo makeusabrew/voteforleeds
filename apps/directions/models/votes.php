@@ -15,6 +15,9 @@ class Votes extends Table {
                 "required" => true,
                 "validation" => "unique",
             ),
+            "ip" => array(
+                "type" => "text",
+            ),
         ),
     );
 }

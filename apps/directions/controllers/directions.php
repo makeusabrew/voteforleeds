@@ -28,6 +28,7 @@ class DirectionsController extends Controller {
         $data = array(
             "email" => $this->request->getVar("email"),
             "direction_id" => $this->direction->getId(),
+            "ip" => $this->request->getIp(),
         );
 
         $vote = Table::factory("Votes")->newObject();
