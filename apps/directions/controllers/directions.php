@@ -40,7 +40,7 @@ class DirectionsController extends Controller {
             $errors = $vote->getErrors();
             if (isset($errors['email']) && $errors['email'] == 'this email is already in use') {
                 // look, it's just a quick hack right, because already in use is a bit boring and not quite right for LDF
-                $errors['email'] = 'this email address has already voted';
+                $errors['email'] = 'Whoops, you\'ve used that one, try again!';
             }
             $this->setErrors($errors);
             if (!$this->request->isAjax()) {

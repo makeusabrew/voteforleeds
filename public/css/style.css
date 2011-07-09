@@ -380,6 +380,13 @@ input[type="submit"]{
 	background:#c53f3f;
 }
 
+ul.errors{
+    margin-left: 0;
+    list-style: none;
+    color: #E12000;
+    font-style: italic;
+}
+
 /*--- THANKS ---*/
 .thanks{
 	text-align:center;
