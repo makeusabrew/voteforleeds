@@ -14,7 +14,7 @@
             <ol class="voter-list">
         {foreach from=$votes item="vote" name="inner"}
             
-                    <li><h3>{$vote->email}</h3> <p>{$vote->created|date_format:"d/m/y H:i"}, {$vote->ip|default:"-"}</p></li>
+                    <li><h4>{$vote->email}</h4> <p>{$vote->created|date_format:"d/m/y H:i"}, {$vote->ip|default:"-"}</p></li>
                
         {foreachelse}
             <p>No votes.</p>
