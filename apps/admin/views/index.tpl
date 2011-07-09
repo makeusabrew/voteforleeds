@@ -1,7 +1,7 @@
 {extends file="base.tpl"}
 {block name="body"}
     <h1>Admin</h1>    
-    <div id="container center"></div> 
+    <div id="pie-chart"></div> 
     
     <h2 class="cf">Vote Breakdown</h2>
     
@@ -40,7 +40,7 @@
 
             var chart = new Highcharts.Chart({
                 chart: {
-                    renderTo: 'container',
+                    renderTo: 'pie-chart',
                     plotBackgroundColor: null,
                     plotBorderWidth: null,
                     plotShadow: false
