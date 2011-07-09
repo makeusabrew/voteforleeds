@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 09, 2011 at 12:15 PM
+-- Generation Time: Jul 09, 2011 at 02:18 PM
 -- Server version: 5.1.44
 -- PHP Version: 5.3.2
 
@@ -65,9 +65,9 @@ CREATE TABLE `directions` (
 -- Dumping data for table `directions`
 --
 
-INSERT INTO `directions` VALUES(1, 'Direction A', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.', 'direction-a', 0, '2011-06-30 14:10:04', '2011-06-30 14:10:04');
-INSERT INTO `directions` VALUES(2, 'Direction B', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.', 'direction-b', 1, '2011-06-30 14:10:04', '2011-06-30 14:10:04');
-INSERT INTO `directions` VALUES(3, 'Direction C', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis.', 'direction-c', 2, '2011-06-30 14:10:44', '2011-06-30 14:10:44');
+INSERT INTO `directions` VALUES(1, 'The Leeds Digital Owl', 'Adapted from the city''s coat of arms this is a character that could lend itself to demonstrating the digital aspects of the festival and the city.', 'direction-a', 0, '2011-06-30 14:10:04', '2011-06-30 14:10:04');
+INSERT INTO `directions` VALUES(2, 'The 3D Pixel Approach', 'For a festival that is accessible, interactive and fun, this is an idea that allows digital to be expressed in the "real world". ', 'direction-b', 1, '2011-06-30 14:10:04', '2011-06-30 14:10:04');
+INSERT INTO `directions` VALUES(3, 'Digital Whiz-Bang!', 'For something heroic, something courageous, something Leeds!', 'direction-c', 2, '2011-06-30 14:10:44', '2011-06-30 14:10:44');
 
 -- --------------------------------------------------------
 
@@ -125,7 +125,7 @@ CREATE TABLE `votes` (
   `updated` datetime NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `votes`
