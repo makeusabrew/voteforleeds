@@ -25,7 +25,7 @@
             </div>            
 
             <ul id="share">
-                <li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="Vote for your favourite identity for the Leeds Digital Festival" data-via="LDSDigital" data-url="http://www.voteforleeds.com/">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
+                <li><a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-text="Vote for your favourite identity for the Leeds Digital Festival #ldf2011" data-via="LDSDigital" data-url="http://www.voteforleeds.com/">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script></li>
                 <li><fb:like href="{$full_url}" send="true" width="140" show_faces="false" layout="button_count" font="arial"></fb:like></li>
             </ul>
             
