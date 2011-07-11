@@ -90,11 +90,11 @@
             FB.Event.subscribe('message.send', function(targetUrl) {
               _gaq.push(['_trackSocial', 'facebook', 'send', targetUrl]);
             });
-            FB.Event.subscribe('comment.create', function(targetUrl) {
-              _gaq.push(['_trackSocial', 'facebook', 'comment', targetUrl]);
+            FB.Event.subscribe('comment.create', function() {
+              _gaq.push(['_trackSocial', 'facebook', 'comment']);
             });
-            FB.Event.subscribe('comment.remove', function(targetUrl) {
-              _gaq.push(['_trackSocial', 'facebook', 'remove comment', targetUrl]);
+            FB.Event.subscribe('comment.remove', function() {
+              _gaq.push(['_trackSocial', 'facebook', 'remove comment']);
             });
           };
           (function() {
