@@ -118,5 +118,27 @@
                     _gaq.push(['_trackSocial', 'twitter', 'follow']);
                 }
           });
+          
+          function extractParamFromUri(uri, paramName){
+            if(!uri){
+                return;
+            }
+            var uri = uri.split('#')[0]; //remove anchor
+            var parts = uri.split('?'); //check for query params
+            if(parts.length == 1){
+                return; //no params
+            }
+            
+            var query = decodeURI(parts[1]);
+            
+            //find the url param
+            paramName += '=';
+            var params = query.split('&');
+            for(var i = 0, param; param = params[i]; ++i){
+                if(param.indexOf(paramName) === 0){
+                    return unescape(param.split('=')[1]);
+                }
+            }
+          }
         </script>{/literal}
 {/block}
