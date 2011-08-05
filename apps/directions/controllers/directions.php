@@ -20,10 +20,19 @@ class DirectionsController extends Controller {
     }
 
     public function vote() {
+        $this->assign("direction", $this->direction);
+        $this->assign("slides", $this->direction->getSlides());
+        $this->assign("page_id", "gallery");
         if (!$this->request->isPost()) {
             // what action?
             return $this->redirect("/");
         }
+
+        // temporary vote closed measure
+        $this->setErrors(array(
+            'vote' => 'Sorry, voting has now closed',
+        ));
+        return $this->render("index");
 
         $data = array(
             "email" => $this->request->getVar("email"),
